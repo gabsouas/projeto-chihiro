@@ -3,8 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #A64141;
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 }
 
 .header {
-  border-bottom: 3px solid #32b9cd;
+  border-bottom: 3px solid #F2F2F2;
 }
 
 .header .container {
@@ -27,7 +27,17 @@ body {
 }
 
 .agora {
-  font-weight: 800;
+  font-size: 25px;
+  padding-left: 80px;
+  padding-right: 80px;
+  color: #F2F2F2;
+}
+
+a{
+  font-size: 25px;
+  padding-left: 80px;
+  padding-right: 80px;
+  color: #F2F2F2;
 }
 
 .navbar {
@@ -46,6 +56,10 @@ body {
   font-weight: 500;
 }
 
+#p_titulo_sinopse{
+  margin-right: 30px;
+  margin-left: 20px;
+}
 
 /* BANNER */
 
@@ -53,7 +67,7 @@ body {
   height: fit-content;
   padding: 40px 0;
   color: white;
-  background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
+  background-color: #261820;
   background-size: cover;
 }
 
@@ -83,8 +97,12 @@ body {
 /* missao visao valores */
 
 .social {
-  background-color: #e5e5e5;
+  background-color: #F2A488;
   display: flex;
+  border-top: 3px solid #F2F2F2;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
 }
 
 .social .container{
@@ -118,15 +136,61 @@ body {
   align-items: center;
 }
 
+#texto_sinopse{
+  font-size: 60%;
+  text-align: justify;
+  margin-right: 35px;
+}
+
+.container {
+  position: relative;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #261820;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
 
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  background-color: #261820;
   height: 150px;
   color: #fff;
   display: flex;
   font-size: 15px;
+  width: 100%;
 }
 
 .footer .container {
