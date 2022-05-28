@@ -76,9 +76,7 @@ a {
   height: fit-content;
   padding: 40px 0;
   color: white;
-  /* background-color: #261820;*/
   background-color: #F2A488;
-
   background-size: cover;
 }
 
@@ -201,6 +199,10 @@ a {
   color: #e5e5e5;
 }
 
+#msg_simulador{
+  text-align: center;
+}
+
 /* missao visao valores */
 
 .social {
@@ -309,14 +311,17 @@ a {
 /* LOGIN */
 
 .banner .container .card {
-  background-color: #e5e5e5;
-  height: fit-content;
+  background-color: #261820;
+  margin-right: 70%;
+  padding-left: 30%;
+  padding-right: 20%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   width: 400px;
   display: flex;
   flex-direction: column;
-  color: palevioletred;
+  color: #F2F2F2;
   align-items: center;
-  border-radius: 4px;
 }
 
 .card {
@@ -326,6 +331,7 @@ a {
 
 .card h2 {
   font-size: 30px;
+  text-align: center;
 }
 
 .card h4 {
@@ -376,21 +382,21 @@ button {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #32b9cd;
-  padding: 10px;
+  border: 2px solid #261820;
+  padding: 15px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 .btn {
   font-family: "Barlow", sans-serif;
   border: 0;
-  border-radius: 5px;
+  border-radius: 50px;
   font-weight: 600;
   font-size: 18px;
   padding: 10px 15px;
-  color: white;
-  background-color: #e6005a;
+  color: #A64141;
+  background-color: #F2A488;
   width: 120px;
   align-self: center;
   margin-top: 5px;
