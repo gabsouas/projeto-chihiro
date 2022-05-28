@@ -2,11 +2,11 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/icon/logo-chihiro.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Dashboards</title>
+    <title>Dashboards</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="dashboards.css">
@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- scripts do Chart.js -->
-    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <!--<script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>-->
 
 </head>
 
@@ -26,27 +26,28 @@
 
     <div class="janela">
         <div class="header-left">
-            <h1>AcquaTec</h1>
+            <img src="img-dashboard/logo-chihiro.png" width="35%">
+            <h1>Spirited Away</h1>
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
-            <div class="btn-nav-white">
+            <div class="btn-nav">
                 <a href="./cards.html">
-                    <h3>Aquários</h3>
+                    <h3>Votações</h3>
                 </a>
             </div>
 
             <div class="btn-nav">
 
-                <h3>Gráficos</h3>
+                <h3>Gráfico de Votações</h3>
 
             </div>
 
-            <div class="btn-nav-white">
+            <div class="btn-nav">
                 <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
+                    <h3>Forúm de discussões</h3>
                 </a>
             </div>
 
@@ -59,10 +60,10 @@
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">Aquario 4</button>
+                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Votação do filme</button>
+                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Votação de personagens </button>
+                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Votação de cena</button>
+                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">X</button>
             </div>
             <div>
                 <h3 class="tituloGraficos">

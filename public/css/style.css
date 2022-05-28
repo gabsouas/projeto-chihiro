@@ -330,7 +330,7 @@ a {
 }
 
 .card h2 {
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -357,7 +357,7 @@ button {
   display: none;
   background-color: #fff;
   color: black;
-  width: 230px;
+  width: 200px;
   position: fixed;
   border-radius: 4px;
   border: #e6005a 3px solid;
@@ -371,7 +371,7 @@ button {
 }
 
 .formulario .tipo_campo {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600 !important;
 }
 
@@ -383,7 +383,7 @@ button {
 input {
   margin-bottom: 10px;
   border: 2px solid #261820;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   border-radius: 50px;
 }
@@ -425,20 +425,20 @@ input {
   color: white;
 }
 
+.header-left{
+  align-items: center;
+}
+
+/*Botão votação*/
 .header-left {
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 999;
   height: 100vh;
   width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
-  /* border: 3px solid pink; */
+  background-color: #A64141;
 }
 
 .dash-right {
@@ -452,47 +452,38 @@ input {
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: #f2f2f2;
+  margin-top: 0;
+  font-size: 20px;
 }
 
 .hello {
-  width: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
 }
 
 .hello h3 {
   color: #e3b062;
-  font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 20px;
 }
 
-.hello h3 span {
-  font-weight: 800;
-}
-
+/*Botão grafico de votações*/
 .btn-nav {
-  width: 40%;
+  width: 100%;
   color: white;
-  background-color: #e6005a;
-  border-radius: 5px;
+  background-color: #F2A488;
+  border-radius: 50px;
   text-align: center;
-  padding: 2% 5%;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 
-.btn-nav-white {
-  width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
-  border-radius: 5px;
-  text-align: center;
-  padding: 2% 5%;
+img{
+  margin-top: 5px;
 }
-
-.btn-nav-white h3 {
-  color: #e6005a;
-  padding: 0;
-  margin: 0;
+h3{
+  font-size: 15px;
 }
 
 .btn-nav h3,
@@ -502,12 +493,10 @@ input {
 }
 
 .btn-logout {
-  margin: 0;
-  padding: 0;
   width: 20%;
-  background-color: #32b9cd;
+  background-color: #261820;
   color: white;
-  border-radius: 10px;
+  border-radius: 50px;
   text-align: center;
   padding: 10px 15px;
   margin-bottom: 100px;

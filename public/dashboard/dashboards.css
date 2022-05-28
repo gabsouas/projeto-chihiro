@@ -7,7 +7,6 @@ body {
 
 .dash-right .avisos {
   width: 100%;
-  /* border: 3px solid pink; */
   color: rgb(216, 216, 216);
   font-family: "Exo 2", sans-serif;
 }
@@ -115,7 +114,6 @@ body {
   top: 0;
   left: 25%;
   background-color: #161618;
-
   /* width: 75%;
     display: flex;
     background-color: #161618;
