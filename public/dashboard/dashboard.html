@@ -18,11 +18,11 @@
         rel="stylesheet">
 
     <!-- scripts do Chart.js -->
-    <!--<script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>-->
+<script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
 </head>
 
-<body onload="validarSessao(), atualizarFeed()">
+<!-- <body onload="validarSessao(), atualizarFeed()"> -->
 
     <div class="janela">
         <div class="header-left">
@@ -33,19 +33,21 @@
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
             </div>
 
-            <div class="btn-nav">
+            <div class="btn-nav-one">
                 <a href="./cards.html">
                     <h3>Votações</h3>
                 </a>
             </div>
 
-            <div class="btn-nav">
-
-                <h3>Gráfico de Votações</h3>
-
+            <div class="btn-nav-two">
+                <h3>
+                    <a href="dashboard.html">
+                        Gráfico de Votações
+                    </a>
+                </h3>
             </div>
 
-            <div class="btn-nav">
+            <div class="btn-nav-three">
                 <a href="./mural.html">
                     <h3>Forúm de discussões</h3>
                 </a>
@@ -60,7 +62,7 @@
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Votação do filme</button>
+                <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)"> Votação do filme</button>
                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Votação de personagens </button>
                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">Votação de cena</button>
                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">X</button>
@@ -93,7 +95,7 @@
 
     function alterarTitulo(idAquario) {
         var tituloAquario = document.getElementById("tituloAquario")
-        tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
+        tituloAquario.innerHTML = "Últimos votos de usuários <span style='color: #A64141'>Cadastrados " + idAquario + "</span>"
     }
 
     // O gráfico é construído com três funções:
@@ -231,10 +233,10 @@
                     // tirando e colocando valores no gráfico
                     dados.labels.shift(); // apagar o primeiro
                     dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
-                    
+
                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                     dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
-                    
+
                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
                     dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
 
