@@ -19,7 +19,7 @@
 </head>
 
 <!-- Comentar body para modificar essa pagina abaixo -->
- <!-- <body onload="validarSessao(), atualizacaoPeriodica()"> --> 
+<!-- <body onload="validarSessao(), atualizacaoPeriodica()"> -->
 
 <div class="janela">
     <div class="header-left">
@@ -53,6 +53,7 @@
         <div class="btn-logout" onclick="limparSessao()">
             <h3>Sair</h3>
         </div>
+        <!-- <img src="boh.jpg" style="width:5%; border-radius: 50px;"> -->
 
     </div>
 
@@ -71,42 +72,61 @@
                 <h2>0</h2>
             </div>
             <div class="item-regua alerta-quente">
-                <h4>Interações</h4>
+                <h4>X</h4>
                 <h2>0</h2>
             </div>
             <div class="item-regua perigo-quente">
-                <h4>Você é...</h4>
-                <h2>X</h2>
+                <h4></h4>
+                <button onclick="sortear()" id="botao-sortear"><b id="botao-img"> Você é...</b></button>
+                <div id="div_img"></div>
+
             </div>
         </div>
 
         <div class="cards">
             <div class="card">
-                <h1>Votação do filme</h1>
+                <h1>Votação geral do filme</h1>
                 <div class="temperatura">
-                    <p id="temp_aquario_1">Resultado atual:<span id="">0</span></p>
+                    <p id="temp_aquario_1">Qual sua nota?</p>
+
+                    <input id="i_filme" placeholder="Nota de 0 a 100">
+
                 </div>
                 <div class="cor-alerta" id="card_1"></div>
             </div>
             <div class="card">
-                <h1>Votação de personagens</h1>
+                <h1>Votação de personagem</h1>
                 <div class="temperatura">
-                    <p id="temp_aquario_2">Resultado atual:<span id="">0</span></p>
+                    <p id="temp_aquario_2">Qual seu personagem favorito?</p>
+
+                    <select id="sel_personagem">
+                        <option value="chihiro">Chihiro</option>
+                        <option value="haku">Haku</option>
+                        <option value="yubaba">Yubaba</option>
+                        <option value="lin">Lin</option>
+                        <option value="kaonashi">Kaonashi</option>
+                        <option value="kamaji">Kamaji</option>
+                        <option value="boh">Boh</option>
+                    </select>
+
                 </div>
                 <div class="cor-alerta" id="card_2"></div>
 
             </div>
             <div class="card">
-                <h1>Votação de cena</h1>
+                <h1>Votação de melhor cena</h1>
                 <div class="temperatura">
-                    <p id="temp_aquario_3">Resultado atual:<span id="">0</span></p>
+                    <p id="temp_aquario_3">Qual sua cena favorita?</p>
+
+                    <input id="i_cena" placeholder="Cena favorita">
+
                 </div>
                 <div class="cor-alerta ideal" id="card_3"></div>
             </div>
             <div class="card">
                 <h1>X</h1>
                 <div class="temperatura">
-                    <p id="temp_aquario_4">Resultado atual:<span id="">0</span></p>
+                    <p id="temp_aquario_4">Resultado atual:</p>
                 </div>
                 <div class="cor-alerta" id="card_4"></div>
             </div>
@@ -216,6 +236,34 @@
         // alterando
         card.className = classe_temperatura;
 
+    }
+
+    function sortear() {
+        div_img.innerHTML = ''
+
+        var personagem = parseInt(Math.random() * 7) + 1
+
+        if (personagem == 1) {
+            div_img.innerHTML = '<img src="chihiro.jpg" style="width:50%;border-radius: 50px;">'
+        }
+        if (personagem == 2) {
+            div_img.innerHTML = '<img src="haku.jpg" style="width:50%;border-radius: 50px;">'
+        }
+        if (personagem == 3) {
+            div_img.innerHTML = '<img src="yubaba.jpg" style="width:50%;border-radius: 50px;">'
+        }
+        if (personagem == 4) {
+            div_img.innerHTML = '<img src="lin.jpg" style="width:50%;border-radius: 50px;">'
+        }
+        if (personagem == 5) {
+            div_img.innerHTML = '<img src="kaonashi.jpg" style="width:50%;border-radius: 50px;">'
+        }
+        if (personagem == 6) {
+            div_img.innerHTML = '<img src="kamaji.jpg" style="width:50%;border-radius: 50px;">'
+        }
+        if (personagem == 7) {
+            div_img.innerHTML = '<img src="boh.jpg" style="width:50%;border-radius: 50px;">'
+        }
     }
 
 </script>

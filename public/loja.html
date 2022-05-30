@@ -24,7 +24,7 @@
     <div class="header">
         <div class="container">
             <ul class="navbar">
-                <li > <a href="index.html">Sobre</a></li>
+                <li> <a href="index.html">Sobre</a></li>
                 <li>
                     <a href="loja.html">Loja</a>
                 </li>
@@ -63,36 +63,44 @@
     <!-- simulador inicio -->
     <div id="banner2_loja">
         <div>
-            
+
             <div class="div_produtos">
-                <p id="msg_simulador">Antes de entrar em contato para efetuar a compra simule aqui <br> 
-                   e entre em contato através do e-mail gabsouas@gmail.com</p>
+                <p id="msg_simulador">Antes de entrar em contato para efetuar a compra simule aqui <br>
+                    e entre em contato através do e-mail gabsouas@gmail.com</p>
                 <p id="p_titulo_loja">Simular uma compra:</p>
                 Selecione o produto:
                 <select id="sel_produto">
-                    <option value="chaveiro">Chaveiro</option>
-                    <option value="bottom">Bottom</option>
-                    <option value="camiseta">Camiseta</option>
-                    <option value="Caneca">Caneca</option>
+                    <option value="0">-- Escolha um produto --</option>
+                    <option value="18.90">Chaveiro</option>
+                    <option value="45.00">Bottom</option>
+                    <option value="49.90">Camiseta P</option>
+                    <option value="54.90">Camiseta M</option>
+                    <option value="62.50">Camiseta G</option>
+                    <option value="39.80">Caneca</option>
                 </select>
                 <br>
 
                 Forma de pagamento:
                 <select id="sel_pagamento">
-                    <option value="credito">Cartão de crédito</option>
-                    <option value="debito">Cartão de débito</option>
-                    <option value="boleto">Boleto</option>
+                    <option value="0">-- Escolha uma forma de pagamento</option>
+                    <option value="0.119">Cartão de crédito</option>
+                    <option value="1">Cartão de débito</option>
+                    <option value="1">Boleto</option>
                 </select>
                 <br>
                 Tipo de frete:
                 <select id="sel_frete">
-                    <option value="5">Rápido</option>
-                    <option value="2">Expresso</option>
-                    <option value="10">10 dias Uteis</option>
+                    <option value="0">-- Escolha frete --</option>
+                    <option value="14.90">Rápido</option>
+                    <option value="30">Expresso</option>
+                    <option value="8.50">10 dias Uteis</option>
                 </select>
                 <br>
 
-                <button id="botao_simulador">Simular</button>
+                <button id="botao_simulador" onclick="simulador()">Simular</button>
+                <div id="div_resultado"></div>
+                <div id="div_carrinho"></div>
+
             </div>
         </div>
     </div>
@@ -104,8 +112,27 @@
         </div>
     </div>
     <!--footer fim-->
-
-
 </body>
 
 </html>
+<script>
+    var total = 0
+    function simulador() {
+        var pagamento = Number(sel_pagamento.value)
+        var frete = Number(sel_frete.value)
+
+        total += Number(sel_produto.value)
+        div_resultado.innerHTML = `Sua compra sairá no total de 
+         <b>R$${(Number(total) + Number(frete) * Number(pagamento)).toFixed(2)}</b><br>
+         <b>Carrinho:</b><br>`
+
+        div_carrinho.innerHTML += `${Number(sel_produto.value)}<br>`
+
+        if (sel_produto.value == 0 || pagamento == 0 || frete == 0) {
+            alert('!!!Você esqueceu de selecionar alguma opção!!!')
+
+            div_resultado.innerHTML = ''
+            div_carrinho.innerHTML = ''
+        }
+    }
+</script>
