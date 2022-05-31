@@ -2,9 +2,8 @@
 -- Você precisa executar os comandos no banco de dados para criar as tabelas,
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
-
-USE acquatec;
+CREATE DATABASE chihiro;
+USE chihiro;
 
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -13,19 +12,20 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)
 );
 
-CREATE TABLE aviso (
+CREATE TABLE Filme (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
+	notaFilme INT,
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
+CREATE TABLE Personagem (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
+	PersonagemFav INT,
+	fk_usuario INT,
+	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
+
 
 /* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
 
