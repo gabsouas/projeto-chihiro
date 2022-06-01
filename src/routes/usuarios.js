@@ -16,6 +16,16 @@ router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);
 })
 
+/* Nota do filme */
+router.post("/notaFilme", function (req, res) {
+    usuarioController.notaFilme(req, res);
+})
+
+/* Personagem favorito */
+router.post("/Personagem", function (req, res) {
+    usuarioController.Personagem(req, res);
+})
+
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });

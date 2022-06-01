@@ -94,9 +94,79 @@ function cadastrar(req, res) {
     }
 }
 
+/* Nota do filme */
+function notaFilme(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var nota = req.body.notaServer;
+    var email = req.body.emailServer
+
+    // Faça as validações dos valores
+    if (nota == undefined) {
+        res.status(400).send("O nome está undefined!");
+    } 
+    else if (email == undefined){
+            res.status(400).send("O email está undefined!");
+    }
+     else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.notaFilme(nota, email)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+/* Personagem favorito */
+function Personagem(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var personagem = req.body.personagemServer;
+    var email = req.body.emailServer
+
+    // Faça as validações dos valores
+    if (nota == undefined) {
+        res.status(400).send("O nome está undefined!");
+    } 
+    else if (email == undefined){
+            res.status(400).send("O email está undefined!");
+    }
+     else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.Personagem(personagem, email)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    notaFilme,
+    Personagem,
     testar
 }
