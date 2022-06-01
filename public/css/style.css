@@ -454,7 +454,7 @@ input {
 
 .dash-right {
   display: flex;
-  width: 75%;
+  /* width: 75%; */
   height: fit-content;
   background-color: #161618;
   position: relative;
@@ -540,4 +540,12 @@ h3{
 
 .simulador .container {
   flex-direction: column
+}
+
+#footer-playlist{
+  margin-right: 20%;
+}
+
+#frase-footer{
+  text-align: center;
 }
