@@ -162,6 +162,7 @@ function Personagem(req, res) {
     }
 }
 
+
 module.exports = {
     entrar,
     cadastrar,

@@ -9,27 +9,30 @@ CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha VARCHAR(50),
+    fkFilme int,
+    foreign key(fkFilme) references Filme(id)
 );
 
 CREATE TABLE Filme (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	notaFilme INT,
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+	notaFilme VARCHAR(45)
 );
 
-CREATE TABLE Personagem (
+/* select
+ notaFilme, count(notaFilme) as Votos from Filme group by notaFilme; */
+
+/* CREATE TABLE Personagem (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	PersonagemFav INT,
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-);
+); */
 
 
 /* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
 
-create table medida (
+/* create table medida (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	dht11_umidade DECIMAL,
 	dht11_temperatura DECIMAL,
@@ -39,7 +42,7 @@ create table medida (
 	momento DATETIME,
 	fk_aquario INT,
 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
-);
+); */
 
 
 /* para sql server - remoto - produção */

@@ -88,9 +88,9 @@
                 <!-- Nota do filme -->
                 <h1>Votação geral do filme</h1>
                 <div class="temperatura">
-                    <p id="temp_aquario_1">Qual sua nota?</p>
+                    <p id="temp_aquario_1">Qual seu personagem favorito?</p>
 
-                    <input id="i_filme" placeholder="Nota de 0 a 100" type="number">
+                    <input id="i_filme" placeholder="digite aqui" type="text">
                     <button onclick="notaFilme()" id="filme">Enviar</button>
 
                 </div>
@@ -168,7 +168,7 @@
         }
 
         function obterdados(idAquario) {
-            fetch(`/medidas/tempo-real/${idAquario}`)
+            fetch(`/medidas/tempo-real/${Filme}`)
                 .then(resposta => {
 
                     if (resposta.ok) {
@@ -193,7 +193,7 @@
 
         }
 
-        function alertar(temperatura, idAquario) {
+        function alertar(Filme) {
             var limites = {
                 muito_quente: 23,
                 quente: 22,
