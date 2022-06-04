@@ -64,13 +64,13 @@
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
                 <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)"> Votação do filme</button>
                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Votação de personagens </button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">X</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">X</button>
+                <!--                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">X</button>
+                <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">X</button> -->
             </div>
             <div>
-                <h3 class="tituloGraficos">
+                <!--                 <h3 class="tituloGraficos">
                     <span id="tituloAquario">123</span>
-                </h3>
+                </h3> -->
             </div>
             <div class="graph">
                 <canvas id="canvas_grafico" style="background-color: white;"></canvas>
@@ -89,9 +89,9 @@
 
     window.onload = obterDadosGrafico(1);
 
-    /*     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+         b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     
-        verificar_autenticacao();
+    /*    verificar_autenticacao();
     
         function alterarTitulo(Filme) {
             var tituloFilme = document.getElementById("tituloFilme")
@@ -154,8 +154,7 @@
                 {
                     yAxisID: 'y-temperatura',
                     label: 'Votação',
-                    borderColor: '#FFF',
-                    backgroundColor: '#32b9cd8f',
+                    backgroundColor: '#A64141',
                     fill: true,
                     data: []
                 }
@@ -221,7 +220,7 @@
 
         //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
         //     Para ajustar o "select", ajuste o comando sql em src/models
-        
+
         function atualizarGrafico(Filme, dados) {
 
             fetch(`/medidas/tempo-real/${notaFilme}`, { cache: 'no-store' }).then(function (response) {
@@ -235,8 +234,8 @@
                         /*  dados.labels.shift(); // apagar o primeiro
                          dados.labels.push(novoRegistro[0].notaFilme; */ // incluir um novo momento
 
-                         /* dados.labels = []
-                        dados.datasets[0].data = [] */ 
+                        /* dados.labels = []
+                       dados.datasets[0].data = [] */
 
                         for (inserido = 0; inserido < novoRegistro.length; inserido++) {
                             var registrado = novoRegistro[inserido];

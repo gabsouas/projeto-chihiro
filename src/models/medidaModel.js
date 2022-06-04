@@ -42,8 +42,8 @@ function buscarMedidasEmTempoReal(idAquario) {
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select notaFilme, 
-                               count(notaFilme) as Votos 
-                                    from Filme group by notaFilme;`;
+                               count(notaFilme) qtd_pessoas 
+                                     from Filme group by notaFilme;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

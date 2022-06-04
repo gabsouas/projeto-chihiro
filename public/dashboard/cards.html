@@ -58,7 +58,7 @@
     </div>
 
     <div class="dash">
-        <div class="regua">
+<!--         <div class="regua">
             <div class="item-regua perigo-frio">
                 <h4>Cadastros</h4>
                 <h2>0</h2>
@@ -74,10 +74,10 @@
             <div class="item-regua alerta-quente">
                 <h4>X</h4>
                 <h2>0</h2>
-            </div>
+            </div> -->
             <div class="item-regua perigo-quente">
                 <h4></h4>
-                <button onclick="sortear()" id="botao-sortear"><b id="botao-img"> Você é...</b></button>
+                <button onclick="sortear()" id="botao-sortear"><b id="botao-img"> Clique aqui e veja quem você é no filme...</b></button>
                 <div id="div_img"></div>
 
             </div>
@@ -86,18 +86,23 @@
         <div class="cards">
             <div class="card">
                 <!-- Nota do filme -->
-                <h1>Votação geral do filme</h1>
+                <!-- <h1>Votação geral do filme</h1> -->
                 <div class="temperatura">
                     <p id="temp_aquario_1">Qual seu personagem favorito?</p>
 
                     <input id="i_filme" placeholder="digite aqui" type="text">
+                    <br>
                     <button onclick="notaFilme()" id="filme">Enviar</button>
+
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/circle-loading.gif" id="loading-gif">
+                    </div>
 
                 </div>
                 <div class="cor-alerta" id="card_1"></div>
             </div>
-            <div class="card">
-                <!-- Escolha do personagem favorito -->
+<!--             <div class="card">
+                 Escolha do personagem favorito 
                 <h1>Votação de personagem</h1>
                 <div class="temperatura">
                     <p id="temp_aquario_2">Qual seu personagem favorito?</p>
@@ -117,7 +122,7 @@
                 </div>
                 <div class="cor-alerta" id="card_2"></div>
 
-            </div>
+            </div> -->
             <!--             <div class="card">
                 <h1>X</h1>
                 <div class="temperatura">
@@ -148,6 +153,8 @@
     </body>
 
     <script>
+        
+        b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
         function atualizacaoPeriodica() {
             obterdados(1);
@@ -336,9 +343,9 @@
             });
 
             return false;
-        }
+        } 
 
-        function Personagem() {
+/*         function Personagem() {
             //Recupere o valor da nova input pelo nome do id
             // Agora vá para o método fetch logo abaixo
             var personagemVar = sel.personagem.value;
@@ -365,8 +372,7 @@
             });
 
             return false;
-        }
-
+        } */
     </script>
 
 </html>

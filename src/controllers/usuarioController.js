@@ -94,7 +94,6 @@ function cadastrar(req, res) {
     }
 }
 
-/* Nota do filme */
 function notaFilme(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nota = req.body.notaServer;
@@ -108,7 +107,7 @@ function notaFilme(req, res) {
             res.status(400).send("O email está undefined!");
     }
      else {
-        
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.notaFilme(nota, email)
             .then(
@@ -129,7 +128,7 @@ function notaFilme(req, res) {
 }
 
 /* Personagem favorito */
-function Personagem(req, res) {
+/* function Personagem(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var personagem = req.body.personagemServer;
     var email = req.body.emailServer
@@ -160,7 +159,7 @@ function Personagem(req, res) {
                 }
             );
     }
-}
+} */
 
 
 module.exports = {
@@ -168,6 +167,6 @@ module.exports = {
     cadastrar,
     listar,
     notaFilme,
-    Personagem,
+    /* Personagem, */
     testar
 }

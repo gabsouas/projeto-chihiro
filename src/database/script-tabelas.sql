@@ -9,18 +9,20 @@ CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50),
-    fkFilme int,
-    foreign key(fkFilme) references Filme(id)
+	senha VARCHAR(50)
 );
 
 CREATE TABLE Filme (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	notaFilme VARCHAR(45)
+	notaFilme VARCHAR(45),
+	fk_usuario int,
+    foreign key(fk_usuario) references usuario(id)
 );
 
-/* select
- notaFilme, count(notaFilme) as Votos from Filme group by notaFilme; */
+/* select * From usuario;
+select * From Filme;
+select notaFilme, count(notaFilme) qtd_pessoas from Filme group by notaFilme; */
+
 
 /* CREATE TABLE Personagem (
 	id INT PRIMARY KEY AUTO_INCREMENT,

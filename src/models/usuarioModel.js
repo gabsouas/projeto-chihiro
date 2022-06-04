@@ -32,9 +32,10 @@ function cadastrar(nome, email, senha) {
 }
 
 /* Nota para o filme */
+/* Nota para o filme */
 function notaFilme(nota, email) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nota);
-    
+
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
@@ -45,7 +46,7 @@ function notaFilme(nota, email) {
 }
 
 /* Personagem favorito */
-function Personagem(PersonagemFav, email) {
+/* function Personagem(PersonagemFav, email) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nota);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
@@ -55,12 +56,12 @@ function Personagem(PersonagemFav, email) {
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
-}
+} */
 
 module.exports = {
     entrar,
     cadastrar,
     notaFilme,
-    Personagem,
+    /* Personagem, */
     listar,
 };
