@@ -101,6 +101,10 @@
                 <div id="div_resultado"></div>
                 <div id="div_carrinho"></div>
 
+                 <div id="div_compra">
+
+                 </div>
+             
             </div>
         </div>
     </div>
@@ -116,10 +120,14 @@
 
 </html>
 <script>
+    var compras = ["compra-mais.gif", "bom-comprador.gif", "otimo-comprador.gif"]
+
+
     var total = 0
     function simulador() {
         var pagamento = Number(sel_pagamento.value)
         var frete = Number(sel_frete.value)
+        
 
         total += Number(sel_produto.value)
         div_resultado.innerHTML = `Sua compra sairá no total de 
@@ -133,6 +141,17 @@
 
             div_resultado.innerHTML = ''
             div_carrinho.innerHTML = ''
+        }
+
+        if((Number(total) + Number(frete) * Number(pagamento)).toFixed(2) > 0 && (Number(total) + Number(frete) * Number(pagamento)).toFixed(2) <= 50){
+            div_compra.innerHTML = `<img src="${compras[0]}" style="height:200px;"> <br> <b>Compra mais!!!!</b>`
+        }
+
+        if((Number(total) + Number(frete) * Number(pagamento)).toFixed(2) > 50 && (Number(total) + Number(frete) * Number(pagamento)).toFixed(2) <= 100){
+            div_compra.innerHTML = `<img src="${compras[1]}" style="height:200px;"> <br> <b>Ótima compra!!!!</b>`
+        }
+        if((Number(total) + Number(frete) * Number(pagamento)).toFixed(2) > 100 && (Number(total) + Number(frete) * Number(pagamento)).toFixed(2) <= 200){
+            div_compra.innerHTML = `<img src="${compras[2]}" style="height:200px;"> <br> <b>Excelente compra!!!!!</b>`
         }
     }
 </script>
