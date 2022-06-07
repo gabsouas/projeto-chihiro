@@ -5,6 +5,17 @@ body {
   font-family: "Exo 2", sans-serif;
 }
 
+.container{
+  width: 100%;
+background-image: url(https://cdna.artstation.com/p/assets/images/images/035/153/674/large/deondre-grant-comp-ghibli-trainshot-02-090.jpg?1614227547);
+background-repeat: no-repeat;
+}
+
+.avisos .container{
+  margin-right: 550px;
+  width: 100%;
+}
+
 .dash-right .avisos {
   width: 100%;
   color: rgb(216, 216, 216);
@@ -25,6 +36,11 @@ body {
   width: 100%;
 }
 
+#form_postagem{
+  margin-left: 5vh;
+  margin-right: 10vh;
+}
+
 .dash-right .avisos .div-form label {
   width: 100%;
 }
@@ -33,13 +49,13 @@ body {
   width: 95%;
   border-radius: 5px;
   border: 3px solid #A64141;
-  background-color: #F2A488;
+  background-color: #f2f2f2;
 }
 
 .dash-right .avisos .div-form textarea {
   width: 100%;
   border: 3px solid #A64141;
-  background-color: #F2A488;
+  background-color: #f2f2f2;
 }
 
 .dash-right .avisos .div-form button {
@@ -51,8 +67,9 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #F2A488;
+  background-color: #A64141;
   width: 120px;
+  margin-left: 10px;
 }
 
 .publicacao-btn-editar {
@@ -64,8 +81,9 @@ body {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
+  background-color: #261820;
   width: 80px;
+  margin-left: 5vh;
 }
 
 .publicacao {
@@ -74,8 +92,8 @@ body {
   align-content: stretch;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  align-items: center;
+  border-bottom: 3px solid #A64141;
   padding: 20px;
 }
 
@@ -88,9 +106,10 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #F2A488;
+  background-color: #A64141;
   border-radius: 5px;
   margin-bottom: 80px;
+  margin-left: 5vh;
 }
 
 .div-buttons {
@@ -205,16 +224,6 @@ body {
   /* border-bottom: solid white 1px; */
   text-align: left;
   margin: 20px;
-}
-
-#sel_personagem{
-  border: 2px solid #261820;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-top: 10px;
-  border-radius: 50px;
-  font-size: 15px;
-  text-align: center;
 }
 
 .temperatura,

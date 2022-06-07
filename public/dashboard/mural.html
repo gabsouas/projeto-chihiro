@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diário</title>
+    <title>Diário do dia</title>
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./dashboards.css">
@@ -34,7 +34,7 @@
     
             <div class="btn-nav-one">
                 <a href="./cards.html">
-                    <h3>Votações</h3>
+                    <h3>Votação</h3>
                 </a>
             </div>
     
@@ -48,7 +48,7 @@
     
             <div class="btn-nav-three">
                 <a href="./mural.html">
-                    <h3>Forúm de discussões</h3>
+                    <h3>Diário do dia</h3>
                 </a>
             </div>
     
@@ -58,38 +58,37 @@
 
         </div>
 
-        <div class="dash-right">
 
-            <div class="avisos">
-                <div class="container">
-                    <h1>Publicar um aviso</h1>
-                    <div class="div-form">
-                        <form id="form_postagem" method="post" onsubmit="return publicar()">
-                            <label>
-                                Título:
+            <div class="dash-right">
+
+                <div class="avisos">
+                    <div class="container">
+                        <h1>Diário do dia</h1>
+                        <div class="div-form">
+                            <form id="form_postagem" method="post" onsubmit="return publicar()">
+                                <label>
+                                    Título:
+                                    <br>
+                                    <input name="titulo" id="titulo" maxlength="100" type="text">
+                                </label>
                                 <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
-                            </label>
-                            <br>
-                            <label>
-                                Descrição (máximo de 250 caracteres):
+                                <label>
+                                    Descrição (máximo de 250 caracteres):
+                                    <br>
+                                    <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                                </label>
                                 <br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                            </label>
-                            <br>
-                            <button>Enviar</button>
-                        </form>
-                    </div>
-                    <h1>Mural de Avisos</h1>
-                    <div class="div-results">
-                        <div id="feed_container" class="feed-container">
+                                <button>Enviar</button>
+                            </form>
+                        </div>
+                        <h1>Diários Passados</h1>
+                        <div class="div-results">
+                            <div id="feed_container" class="feed-container">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-
+        
 
             <!-- MODAL -->
             <!-- <div id="div_modal" class="div-modal">
