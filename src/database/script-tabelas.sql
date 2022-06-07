@@ -2,6 +2,7 @@
 -- Você precisa executar os comandos no banco de dados para criar as tabelas,
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
 /* para workbench - local - desenvolvimento */
+-- DROP DATABASE chihiro;
 CREATE DATABASE chihiro;
 USE chihiro;
 
@@ -19,9 +20,18 @@ CREATE TABLE Filme (
     foreign key(fk_usuario) references usuario(id)
 );
 
-/* select * From usuario;
-select * From Filme;
-select notaFilme, count(notaFilme) qtd_pessoas from Filme group by notaFilme; */
+CREATE TABLE aviso (
+	id INT PRIMARY KEY auto_increment,
+	titulo VARCHAR(100),
+	descricao VARCHAR(150),
+	fk_usuario INT,
+    FOREIGN KEY(fk_usuario) REFERENCES usuario(id)
+);
+
+ /*select * From usuario;
+ select * From aviso;
+ select * From Filme;
+ select notaFilme, count(notaFilme) qtd_pessoas from Filme group by notaFilme; */
 
 
 /* CREATE TABLE Personagem (
