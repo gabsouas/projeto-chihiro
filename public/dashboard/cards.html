@@ -19,7 +19,7 @@
 </head>
 
 <!-- Comentar body para modificar essa pagina abaixo -->
-<!-- <body onload="validarSessao(), atualizacaoPeriodica()"> -->
+<body onload="validarSessao(), atualizacaoPeriodica()"> 
 
 <div class="janela">
     <div class="header-left">
@@ -94,9 +94,9 @@
                     <br>
                     <button onclick="notaFilme()" id="filme">Enviar</button>
 
-                    <div id="div_aguardar" class="loading-div">
+<!--                     <div id="div_aguardar" class="loading-div">
                         <img src="./assets/circle-loading.gif" id="loading-gif">
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="cor-alerta" id="card_1"></div>
@@ -281,7 +281,7 @@
             }
         }
 
-        function publicar() {
+/*         function publicar() {
             var idUsuario = sessionStorage.ID_USUARIO;
 
             var corpo = {
@@ -314,7 +314,7 @@
             });
 
             return false;
-        }
+        } */
 
         function notaFilme() {
             //Recupere o valor da nova input pelo nome do id

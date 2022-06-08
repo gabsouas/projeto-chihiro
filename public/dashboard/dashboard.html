@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="dashboards.css">
+    
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -63,8 +64,8 @@
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
                 <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)"> Votação do filme</button>
-                <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Votação de personagens </button>
-                <!--                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">X</button>
+                <!-- <button class="btn-chart btn-white" onclick="obterDadosGrafico(2)">Votação de personagens </button> -->
+                <!-- <button class="btn-chart btn-white" onclick="obterDadosGrafico(3)">X</button>
                 <button class="btn-chart btn-white" onclick="obterDadosGrafico(4)">X</button> -->
             </div>
             <div>
@@ -73,7 +74,7 @@
                 </h3> -->
             </div>
             <div class="graph">
-                <canvas id="canvas_grafico" style="background-color: white;"></canvas>
+                <canvas id="canvas_grafico" style="background-color: #f2a48800;"></canvas>
             </div>
         </div>
     </div>
@@ -137,7 +138,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, fkFilme) {
+    function plotarGrafico(resposta/* , fkFilme */) {
         console.log('iniciando plotagem do gráfico...');
 
         var dados = {
@@ -154,7 +155,9 @@
                 {
                     yAxisID: 'y-temperatura',
                     label: 'Votação',
-                    backgroundColor: '#A64141',
+                    backgroundColor: ['#A64141',
+                
+                ],
                     fill: true,
                     data: []
                 }
