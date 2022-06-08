@@ -3,12 +3,13 @@
 *,
 body {
   font-family: "Exo 2", sans-serif;
+  overflow-x: hidden;
 }
 
 .container{
-  width: 100%;
-background-image: url(https://cdna.artstation.com/p/assets/images/images/035/153/674/large/deondre-grant-comp-ghibli-trainshot-02-090.jpg?1614227547);
-background-repeat: no-repeat;
+background-size: 100%;
+background-image: url(https://media.istockphoto.com/photos/crumpled-paper-sheet-texture-picture-id1077327944?b=1&k=20&m=1077327944&s=170667a&w=0&h=n5XMcNk2I-4Yi-_duCRyPt5QXNrYpytbBg0qgKtAq4k=);
+/* background-repeat: no-repeat; */
 }
 
 .avisos .container{
@@ -18,7 +19,7 @@ background-repeat: no-repeat;
 
 .dash-right .avisos {
   width: 100%;
-  color: rgb(216, 216, 216);
+  color: #261820
   font-family: "Exo 2", sans-serif;
 }
 
@@ -46,14 +47,14 @@ background-repeat: no-repeat;
 }
 
 .dash-right .avisos .div-form input {
-  width: 95%;
+  width: 80%;
   border-radius: 5px;
   border: 3px solid #A64141;
   background-color: #f2f2f2;
 }
 
 .dash-right .avisos .div-form textarea {
-  width: 100%;
+  width: 85%;
   border: 3px solid #A64141;
   background-color: #f2f2f2;
 }
@@ -87,29 +88,28 @@ background-repeat: no-repeat;
 }
 
 .publicacao {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
   align-content: stretch;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 3px solid #A64141;
+  border-top: 3px solid #261820;
   padding: 20px;
 }
 
 .publicacao>*:not(:last-child) {
-  padding: 0 0 10px 0;
+  /* padding: 0 0 10px 0; */
 }
 
 .div-results {
-  width: 100%;
+  width: 80%;
 }
 
 .div-results .feed-container {
   background-color: #A64141;
   border-radius: 5px;
   margin-bottom: 80px;
-  margin-left: 5vh;
 }
 
 .div-buttons {

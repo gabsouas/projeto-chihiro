@@ -21,25 +21,17 @@ CREATE TABLE Filme (
 );
 
 CREATE TABLE aviso (
-	id INT PRIMARY KEY auto_increment,
+	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
 	descricao VARCHAR(150),
-	fk_usuario INT,
+	fk_usuario INT, 
     FOREIGN KEY(fk_usuario) REFERENCES usuario(id)
 );
 
- /*select * From usuario;
- select * From aviso;
- select * From Filme;
- select notaFilme, count(notaFilme) qtd_pessoas from Filme group by notaFilme; */
-
-
-/* CREATE TABLE Personagem (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	PersonagemFav INT,
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-); */
+/* select * From usuario;
+select * From Filme;
+select * From Aviso;
+select notaFilme, count(notaFilme) qtd_pessoas from Filme group by notaFilme; */
 
 
 /* altere esta tabela de acordo com o que está em INSERT de sua API do arduino */
