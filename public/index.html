@@ -111,6 +111,12 @@
             </div>
         </div>
     </div>
+    <center>
+        <p id="titulo-quiz">Quantas vezes já assistiu o filme?</p>
+        <input type="number" placeholder="digite um número" id="i_vezes" autofocus onkeyup="qtd_vezes()">
+        <br>
+        <div id="div_resultado"></div>
+    </center>
 
     <div class="banner">
         <div class="container">
@@ -135,3 +141,23 @@
 </body>
 
 </html>
+
+<script>
+        function qtd_vezes() {
+        div_resultado.innerHTML = ''
+        var dias = Number(i_vezes.value)
+
+        for (var contador = 0; contador < dias; contador++) {
+
+            if (contador > 1) {
+                div_resultado.innerHTML = '<span  style="color: white;">Iniciante! Assisti mais uma vez :)</span>'
+            }
+            if (contador > 5 ) {
+                div_resultado.innerHTML = '<span  style="color: white;">Entrou para o fã-club <3</span>'
+            }
+            if (contador > 10 ) {
+                div_resultado.innerHTML = '<span  style="color: white;">Adimirador(a) fanático(a)! o.o</span>'
+            }
+        }
+    }
+</script>
